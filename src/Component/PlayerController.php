@@ -12,5 +12,17 @@ use PHPolygon\ECS\Attribute\Serializable;
 class PlayerController extends AbstractComponent
 {
     #[Property]
-    public float $speed = 200.0;
+    public float $moveSpeed = 280.0;
+
+    #[Property]
+    public float $jumpForce = 480.0;
+
+    #[Property]
+    public bool $grounded = false;
+
+    #[Property]
+    public int $jumpsRemaining = 2;
+
+    #[Property]
+    public int $maxJumps = 2;
 }
